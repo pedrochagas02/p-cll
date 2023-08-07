@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Meu Site</title>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: #333;
+color: #fff;
+padding: 10px 0;
+}
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+margin: 0;
+padding: 0;
+}
+nav li {
+margin: 0 15px;
+}
+nav a {
+text-decoration: none;
+color: #fff;
+}
+.content {
+padding: 50px;
+text-align: center;
+}
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 10px 0;
+}
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+align-items: center;
+}
+nav li {
+margin: 10px 0;
+}
+.content {
+padding: 30px;
+}
+}
+</style>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="#">Início</a></li>
+<li><a href="#">Sobre</a></li>
+</ul>
+</nav>
+</header>
+<section class="content">
+<h1>Bem-vindo ao Meu Site!</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, vestibulum lorem vel.</p>
+</section>
+<footer>
+<p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+</footer>
+<script>
+function identNav() {
+const userAgent = navigator.userAgent.toLowerCase();
+let navegador;
+switch (true) {
+case userAgent.includes('chrome'):
+navegador = 'Google Chrome ou Chromium';
+break;
+case userAgent.includes('firefox'):
+navegador = 'Mozilla Firefox ou derivado';
+break;
+case userAgent.includes('safari') && !userAgent.includes('chrome'):
+navegador = 'Safari';
+break;
+case userAgent.includes('edge'):
+navegador = 'Microsoft Edge';
+break;
+case userAgent.includes('opera'):
+navegador = 'Opera';
+break;
+default:
+navegador = 'Navegador Desconhecido';
+}
+return navegador;
+}
+const navegador = identNav();
+alert('Você está usando o ' + navegador);
+</script>
+</body>
+</html>
